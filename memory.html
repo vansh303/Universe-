@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Book</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('https://i.pinimg.com/736x/fd/11/de/fd11de5ad18818e37c36472211343f8e.jpg') no-repeat center center/cover;
+            overflow: hidden;
+        }
+        .book-container {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+        }
+        .book {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+        .page img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .page:nth-child(1) { transform: rotateY(0deg); }
+        .page:nth-child(2) { transform: rotateY(180deg); }
+        .flipped { transform: rotateY(-180deg); }
+        .controls {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .back-btn {
+            background: #ff4081;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="book-container">
+        <div class="book" id="book">
+            <div class="page">📖 Welcome to Memories</div>
+            <div class="page"><img src="https://i.ibb.co/x4vj6Zz/IMG-20240821-214045-873.jpg"></div>
+            <div class="page"><img src="https://i.ibb.co/gZDNL62c/r2.jpg"></div>
+            <div class="page">✨ Beautiful Moments</div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn" onclick="flipBook()">Flip Page</button>
+        <button class="btn back-btn" onclick="goBack()">Back to Explore Madam Ji's Universe</button>
+    </div>
+
+    <script>
+        let flipped = false;
+        function flipBook() {
+            const book = document.getElementById('book');
+            flipped = !flipped;
+            if (flipped) {
+                book.classList.add('flipped');
+            } else {
+                book.classList.remove('flipped');
+            }
+        }
+
+        function goBack() {
+            window.location.href = "universe.html"; // Universe page ka correct path ensure karna
+        }
+    </script>
+
+</body>
+</html>

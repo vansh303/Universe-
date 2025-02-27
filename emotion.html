@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/736x/fd/11/de/fd11de5ad18818e37c36472211343f8e.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background: #ff9800;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e65100;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Emotions Speak Louder</h1>
+        <p> Tujhse jyada jo lage khubsurat mujhe, aisa to koi heera nhi bana ab tak iss jamane me,
+        <br> Hum jo puri aankhein khol kar bhi nhi dekh pate hai ye chand ka tukda kabhi, <br> Iss baat se to lagta hai aayina bhi toot jata hoga usse ke jara se muskura se, <br> Aur tere chehre se jhulfon ko hatane per aisa lagta hai mujhe maano gehre samundar me bhi tujhe dekh kar aag lag jaati hogi abhi, <br> Taaj banane walo se bhi kayi jyada kimti honge haath usseke jissne itna khubsurat ajuba banakar diya hoga iss janame ko... 
+        </p>
+        <button class="btn" onclick="goBack()">Back to Explore Madam Ji's Universe</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = "universe.html"; 
+        }
+    </script>
+</body>
+</html>
